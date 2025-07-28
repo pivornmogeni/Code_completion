@@ -1,0 +1,56 @@
+{
+  "id": "login-test-case",
+  "name": "Login Test with Valid and Invalid Credentials",
+  "commands": [
+    {
+      "command": "open",
+      "target": "/login",
+      "value": ""
+    },
+    {
+      "command": "type",
+      "target": "id=username",
+      "value": "validUser"
+    },
+    {
+      "command": "type",
+      "target": "id=password",
+      "value": "validPass"
+    },
+    {
+      "command": "clickAndWait",
+      "target": "id=loginButton",
+      "value": ""
+    },
+    {
+      "command": "assertTextPresent",
+      "target": "Welcome",
+      "value": ""
+    },
+    {
+      "command": "open",
+      "target": "/login",
+      "value": ""
+    },
+    {
+      "command": "type",
+      "target": "id=username",
+      "value": "invalidUser"
+    },
+    {
+      "command": "type",
+      "target": "id=password",
+      "value": "invalidPass"
+    },
+    {
+      "command": "clickAndWait",
+      "target": "id=loginButton",
+      "value": ""
+    },
+    {
+      "command": "assertTextPresent",
+      "target": "Invalid username or password",
+      "value": ""
+    }
+  ]
+}
